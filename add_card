@@ -1,0 +1,55 @@
+  <section id="category">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <?php
+                $sql = "SELECT * FROM `menu` WHERE id_restaurant = '" . $_SESSION['restaurant_id'] . "'";
+                $query = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_array($query)) {
+                ?>
+                    <div class="col-lg-3 col-md-4 col-sm-2 my-3 mx-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="admin/Menu_img/<?= $row["menu_img"] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $row["name"] ?></h5>
+
+                                <p class="card-text"><?= $rows["price"] ?></p>
+                                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+
+                                            <label class="control-label">Select Size</label>
+                                            <select name="size" id="size" class="form-control custom-select" data-placeholder="Choose a Restaurant">
+                                                <option>--Select Restaurant--</option>
+                                                <?php
+                                                $sqll = "SELECT * FROM `menu_details` WHERE id_menu = '" . $row['id'] . "'";
+                                                $queryy = mysqli_query($conn, $sqll);
+                                                while ($rows = mysqli_fetch_array($queryy)) {
+                                                ?>
+                                                    <option value="<?php echo $rows["id"]; ?>"><?php echo $rows["size"]; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-3 col-sm-3">
+
+                                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="50" step="1" />
+                                    </div>
+                                    <input type="hidden" name="id_discount" id="id_discount" value="<?= $row["id"]; ?>">
+                                    <input type="hidden" name="hidden_name" id="hidden_name" value="<?php echo $row["name"]; ?>" />
+                                    <input type="hidden" name="hidden_price" id="hidden_price_sort">
+                                    <button type="submit" name="add_to_cart" id="btn-submit" class="btn btn btn-success btn-carousel">Oder Now <i class="fas fa-shopping-cart"></i></button>
+                                </form>
+
+                                <span class="mr-1 text-success">
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+
+            </div>
+        </div>
+
+
+
+    </section>

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,600&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap');
+#display_restaurant h1{
+    font-weight: 500;
+    font-size:  60px;
+    letter-spacing: 3;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(78, 78, 78);
+    padding: 2px;
+    position: relative;
+    margin-bottom: 15px;
+}
+#display_restaurant h1::before{
+  content: '';
+  border-bottom: 4px solid #60ba62;
+  position: absolute;
+  left: 5px;
+  bottom: -5px;
+  width: 150px;
+}
+#display_restaurant #list_tags{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+#display_restaurant #list_tags li i{
+  
+    color: #60ba62;
+ }
+#display_restaurant #list_tags li:hover{
+    color: #fff;
+    background-color: #60ba62;
+ }
+
+ #display_restaurant #list_tags li:hover i:before {
+    color: #fff;
+  }
+  .btn-decrement {
+    color: #fff;
+    background-color: #60ba62;
+    border: none;
+  }
+  .btn-decrement:hover {
+    background-color: #fff;
+   color: #60ba62;
+    border: none;
+  }
+.btn-increment{
+  color: #fff;
+    background-color: #60ba62;
+    border: none;
+}
+.btn-increment:hover {
+  background-color: #fff;
+ color: #60ba62;
+  border: none;
+}
+.toast{
+background-color: #60ba62;
+color: #fff;
+position: fixed;
+top: 90px;
+right: 105px;
+padding: 5px;
+z-index: 2500;
+}
+#product-item .card .card-body .btn-group .btn{
+  color: #198754;
+  border-color: #198754;
+}
+#product-item .card .card-body .btn-group .btn:hover{
+  color: #fff;
+  background-color: #198754;
+}
+#product_item .card img{
+ width: 180px;
+ height: 150px;
+ object-fit: cover;
+}
+#product_item .card{
+ 
+  transition: 0.3s;
+}
+#product_item .card .card-footer{
+  display: none;
+ }
+ #product_item .card .card-footer .btn{
+  color: #60ba62;
+  border-color: #60ba62;
+ }
+ #product_item .card  .card-footer .btn:hover{
+  color: #fff;
+  border: none;
+  background-color: #60ba62;
+ }
+ #product_item .card{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(78, 78, 78);
+ }
+ #product_item .card .h4{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(78, 78, 78);
+ }
+ 
+
+ #product_item .card:hover{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+ 
+}
+#product_item .card:hover .card-footer{
+  display: block;
+  
+ }
+ .btn-group{
+   color: red;
+   background-color: #fff;
+ }
+ .btn-group .btn{
+  border-color: #60ba62;
+  background-color: #fff;
+}
+.btn-group .btn:hover{
+  border-color: #60ba62;
+  background-color: #60ba62;
+  color: #fff;
+}
+ .btn-check:checked ,.btn-check:active{
+   color: #fff;
+   background-color: #60ba62;
+ }
+ .btn-group .btn:checked ,.btn:active{
+  color: #fff;
+  background-color: #60ba62;
+}
+
+.itemBox{
+  transition: 0.5;
+}
+#category #list_tags li{
+  cursor: pointer;
+}
+#category #list_tags li:hover{
+  color: #fff;
+   background-color: #60ba62;
+}
+#category #list_tags  .actives{
+   color: #fff;
+   background-color: #60ba62;
+}
